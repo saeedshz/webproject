@@ -1,0 +1,56 @@
+body {
+    /* Sätter standardfonten för hela sidan */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    /* Justerar headern så att allt är centrerat och ger bakgrundsfärg och padding */
+    text-align: center;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+header img {
+    /* Sätter bredden på logotypen i headern */
+    width: 100px;
+    border-radius: 30px;
+}
+
+header h1 {
+    /* Tar bort standardmarginaler för huvudrubriken och anger storlek på texten */
+    margin: 0;
+    font-size: 36px;
+}
+
+header p {
+    /* Stil för tagline, kursiv stil och färg för texten */
+    font-style: italic;
+    color: #555;
+}
+
+.content {
+    /* Skapar en flexbox-layout för innehållet, där elementen delas lika mellan sig */
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.content div {
+    /* Stil för varje sektion i innehållet, med centrering, bredd, padding och bakgrundsfärg */
+    text-align: center;
+    width: 22%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 60px;
+    background-color: #e0f7fa;
+}
+
+footer {
+    /* Stil för sidfoten med centrering och bakgrundsfärg */
+    text-align: center;
+    padding: 10px;
+    background-color: #f0f0f0;
+    margin-top: 250px;
+}
