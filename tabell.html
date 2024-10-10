@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <!-- Anger dokumenttyp som HTML5 -->
+    <meta charset="UTF-8">
+    <!-- Ställer in teckenkodning till UTF-8 för att stödja svenska tecken -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Titel som visas i webbläsarens flik -->
+    <title>Kurser och Beskrivningar</title>
+    <style>
+        /* Tabellen tar upp hela bredden av förälderelementet */
+        table {
+            width: 100%;
+            border-collapse: separate; /* Tillåter mellanrum mellan celler */
+        }
+        /* Sätter en kantlinje på 2 pixlar för hela tabellen, rubriker och celler */
+        table, th, td {
+            border: 2px solid black;
+        }
+        /* Anger padding (luft) inuti varje cell och justerar texten till vänster */
+        th, td {
+            padding: 18px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <!-- Huvudrubrik på sidan -->
+    <h1>Kurser och deras Beskrivningar</h1>
+    
+    <!-- Skapar en tabell med rubriker och kursinformation -->
+    <table>
+        <tr>
+            <!-- Rubriker för tabellens två kolumner: Kurs och Beskrivning -->
+            <th>Kurs</th>
+            <th>Beskrivning</th>
+        </tr>
+        <tr>
+            <!-- Första raden: Kursen "Programmering 1" med beskrivning som lista -->
+            <td>Programmering 1</td>
+            <td>
+                <li>Grunderna för klasser, objekt, egenskaper och metoder.</li>
+                <li>Variablers och konstanters synlighet och livslängd.</li>
+                <li>Enkla algoritmer, till exempel för sökning eller sortering.</li>
+                <li>Implementeringar av datastrukturer, till exempel array, lista eller trädstruktur.</li>
+                <li>Felsökning av källkod och undantagshantering.</li>
+            </td>
+        </tr>
+        <tr>
+            <!-- Andra raden: Kursen "Programmering 2" med beskrivning som lista -->
+            <td>Programmering 2</td>
+            <td>
+                <li>Variablers och metoders synlighet och livslängd.</li>
+                <li>Polymorfism och typsäkerhet.</li>
+                <li>Generiska klasser och metoder.</li>
+                <li>De vanligaste klasserna i ett grafiskt användargränssnitt.</li>
+                <li>Gränssnitt mot internet.</li>
+                <li>Gränssnitt mot profiler och filsystem.</li>
+                <li>Gränssnitt mot databaser.</li>
+            </td>
+        </tr>
+        <tr>
+            <!-- Tredje raden: Kursen "Webbutveckling 1" med beskrivning som lista -->
+            <td>Webbutveckling 1</td>
+            <td>
+                <li>Webben som plattform, dess historia och samhällspåverkan.</li>
+                <li>Teknisk orientering om webbens protokoll, adresser, säkerhet och samspelet mellan klient och server.</li>
+                <li>Utvecklingsprocessen för ett webbtekniskt projekt. Målsättningar, planering, specifikation av struktur och design, kodning, optimering, testning, dokumentation och uppföljning.</li>
+                <li>Kvalitetssäkring av applikationens funktion och validering av kodens kvalitet.</li>
+                <li>Terminologi inom området webbutveckling.</li>
+                <li>Nationella och internationella riktlinjer för god praxis inom webbutveckling.</li>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
