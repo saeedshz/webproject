@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontaktformulär</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h1 {
+    text-align: center;
+    margin-top: 0; /* Ta bort extra marginal ovanför rubriken */
+    position: absolute;
+    top: 20px; /* Justera detta värde för att sätta rubriken där du vill ha den */
+    left: 50%;
+    transform: translateX(-50%);
+    color: #333;
+}
+
+
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            max-width: 500px;
+            width: 100%;
+        }
+
+        label {
+            font-size: 18px;
+            color: #333;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"], input[type="email"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        h5 {
+            font-size: 14px;
+            color: #333;
+            text-align: center;
+        }
+
+        span {
+            font-weight: bold;
+        }
+
+        .required {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Rubrik för kontaktformuläret -->
+    <h1>Kontaktformulär</h1>
+
+    <!-- Formulär -->
+    <form action="#" method="POST">
+        <!-- Namn-fältet är obligatoriskt -->
+        <label for="namn">Namn<span class="required">*</span>:</label>
+        <input type="text" id="namn" name="namn" placeholder="Ange ditt namn" required>
+
+        <!-- E-post-fältet är obligatoriskt -->
+        <label for="email">E-post<span class="required">*</span>:</label>
+        <input type="email" id="email" name="email" placeholder="Ange din e-postadress" required>
+
+        <!-- Meddelande-fältet -->
+        <label for="meddelande">Meddelande:</label>
+        <textarea id="meddelande" name="meddelande" rows="5" placeholder="Skriv ditt meddelande" required></textarea>
+
+        <!-- Skicka-knappen -->
+        <input type="submit" value="Skicka">
+
+        <!-- OBLIGATORISKT notering -->
+        <h5>Fälten markerade med <span class="required">*</span> är <span class="required">OBLIGATORISKA</span></h5>
+    </form>
+
+</body>
+</html>

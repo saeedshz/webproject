@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analog Klocka</title>
+    <!-- Länkar till extern CSS-fil för klockans stil -->
+    <link rel="stylesheet" href="css3clock.css">
+    <!-- Laddar jQuery-biblioteket som används i skriptet -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+</head>
+<body>
+<h1>POWER BY SAEED AJELY 🤓 & JavaScript Kit</h1>
+    <!-- Container för den analoga klockan -->
+    <div id="liveclock" class="outer_face">
+        <!-- Markörer för att representera klockslagen 1-7, 2-8, 4-10 och 5-11 -->
+        <div class="marker oneseven"></div>
+        <div class="marker twoeight"></div>
+        <div class="marker fourten"></div>
+        <div class="marker fiveeleven"></div>
+
+        <!-- Inre delen av klockan som håller tim-, minut- och sekundvisarna -->
+        <div class="inner_face">
+            <!-- Timvisaren -->
+            <div class="hand hour"></div>
+            <!-- Minutvisaren -->
+            <div class="hand minute"></div>
+            <!-- Sekundvisaren -->
+            <div class="hand second"></div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        /***********************************************
+        * CSS3 Analog Clock- by JavaScript Kit (www.javascriptkit.com)
+        * Visit JavaScript Kit at http://www.javascriptkit.com/ for this script and 100s more
+        ***********************************************/
+
+        // Variabeln $hands lagrar alla element med klassen 'hand' (tim-, minut-, och sekundvisare)
+        var $hands = $('#liveclock div.hand');
+
+        // requestAnimationFrame optimerar uppdateringen av animationen (klockans visare) i olika webbläsare
+        window.requestAnimationFrame = window.requestAnimationFrame
+                                        || window.mozRequestAnimationFrame
+                                        || window.webkitRequestAnimationFrame
+                                        || window.msRequestAnimationFrame
+                                        || function(f){setTimeout(f, 60)};
+
+
+        // Funktionen som uppdaterar klockan och roterar visarna baserat på den aktuella tiden
+        function updateclock(){
+            var curdate = new Date(); // Hämtar nuvarande tid och datum
+            // Beräknar timvisarens rotation i grader baserat på timmar och minuter
+            var hour_as_degree = ( curdate.getHours() + curdate.getMinutes()/60 ) / 12 * 360;
+            // Beräknar minutvisarens rotation i grader baserat på minuter
+            var minute_as_degree = curdate.getMinutes() / 60 * 360;
+            // Beräknar sekundvisarens rotation i grader baserat på sekunder och millisekunder
+            var second_as_degree = ( curdate.getSeconds() + curdate.getMilliseconds()/1000 ) /60 * 360;
+            
+            // Applicerar rotationen på timvisaren med CSS3 transform
+            $hands.filter('.hour').css({transform: 'rotate(' + hour_as_degree + 'deg)' });
+            // Applicerar rotationen på minutvisaren
+            $hands.filter('.minute').css({transform: 'rotate(' + minute_as_degree + 'deg)' });
+            // Applicerar rotationen på sekundvisaren
+            $hands.filter('.second').css({transform: 'rotate(' + second_as_degree + 'deg)' });
+            
+            // Anropar sig själv för att kontinuerligt uppdatera klockan
+            requestAnimationFrame(updateclock);
+        }
+
+        // Startar klockuppdateringen
+        requestAnimationFrame(updateclock);
+
+    </script>
+
+</body>
+</html>
