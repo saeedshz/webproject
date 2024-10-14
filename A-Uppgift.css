@@ -1,0 +1,83 @@
+/* A-Uppgift.css */
+
+/* Bakgrundsfärg för hela sidan */
+body {
+    background-color: #f5f5dc;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+/*För den centrala container*/
+.center-container{
+display: flex;
+justify-content: center;
+align-items: center;
+position: relative;
+width: 450px;  /* Anpassat för boxarna */
+height: 450px; /* Anpassat för boxarna */
+
+}
+/* Generell stil för alla boxar */
+.box {
+    position:absolute;
+    width: 180px;
+    height: 180px;
+    border: 5px solid;
+}
+
+/* Blå box längst upp till höger */
+.blue {
+    background-color: blue;
+    border-color: blue;
+    width: 100px;
+    height: 100px; 
+    top: 0;
+    right: 0;
+    z-index: 5;
+}
+
+/* Rosa box i steg */
+.pink {
+    background-color: pink;
+    border-color: pink;
+    top: 200px;
+    left: 300px;
+    z-index: 1;
+}
+
+/* Orange box i steg */
+.orange {
+    background-color: orange;
+    border-color: orange;
+    top: 150px;
+    left: 250px;
+    z-index: 2;
+}
+
+/* Lila box i steg */
+.purple {
+    background-color: purple;
+    border-color: purple;
+    top: 100px;
+    left: 200px;
+    z-index: 3;
+}
+
+/* Grön box i steg */
+.green {
+    background-color: olive;
+    border-color: olive;
+    top: 50px;
+    left: 150px;
+    z-index: 4;
+}
+footer {
+position: absolute;
+bottom: 0; 
+width: 100%;
+text-align: center;
+padding: 10px;
+}
