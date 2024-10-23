@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hem - Fotostudion</title>
+    <link rel="stylesheet" href="webstyle2.css"> <!-- Länk till CSS-filen -->
+</head>
+<body id="body">
+
+    <!-- Header sektion med video, logotyp och text -->
+    <header>
+        <div class="video-header">
+            
+            <!-- *** Här är videon som kommer att användas som bakgrund i headern *** -->
+            <video autoplay muted loop class="header-video">
+                <source src="video/fotografi.mp4" type="video/mp4"> <!-- Källan till videon -->
+                Din webbläsare stödjer inte video-taggen.
+            </video>
+
+            <!-- *** Logotypen som visas i headern *** -->
+            <img class="logo" src="bilder/3.png" alt="Fotostudio Logo">
+            
+            <!-- *** Huvudrubrik och underrubrik i headern *** -->
+            <h1>Välkommen till Fotostudion</h1>
+            <p>Professionell fotografering för alla tillfällen</p>
+
+            <!-- *** Knappen för att växla mellan Dark Mode och Light Mode *** -->
+            <div id="themeToggle">
+                <button id="toggleButton">Byt till Dark Mode</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- *** Navigeringsmeny för webbplatsens sidor *** -->
+    <nav>
+        <ul>
+            <li><a href="home.html">Hem</a></li>
+            <li><a href="about.html">Om Oss</a></li>
+            <li><a href="services.html">Tjänster</a></li>
+            <li><a href="gallery.html">Galleri</a></li>
+            <li><a href="contact.html">Kontakt</a></li>
+        </ul>
+    </nav>
+
+    <!-- *** Huvudinnehåll för sidan *** -->
+    <section id="feature">
+        <div class="titel-text">
+            <h1>Varför välja oss?</h1>
+            <p>Vi är passionerade för att fånga oförglömliga ögonblick med expertis och kreativitet. Oavsett om du planerar ett bröllop eller en porträttfotografering, kan du lita på oss.</p>
+        </div>
+    </section>
+
+    <!-- *** Sidfot (footer) längst ner på sidan *** -->
+    <footer>
+        <p>© 2024 Fotostudion - Alla rättigheter förbehållna</p>
+    </footer>
+
+    <!-- Länk till JavaScript-filen för att hantera Dark Mode -->
+    <script src="WebScript.js"></script>
+</body>
+</html>

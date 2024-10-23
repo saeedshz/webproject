@@ -1,36 +1,67 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-    <!-- Metadata för att ange teckenuppsättning och mobilanpassning -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Läxhjälpen</title>
-    <!-- Inkludera Font Awesome CSS-fil -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- Länka till den externa CSS-filen -->
-    <link rel="stylesheet" href="css/style.css">
+    <title>Kontakt - Saeed Fotostudion</title>
+    <link rel="stylesheet" href="webstyle2.css"> <!-- Länk till CSS-filen -->
 </head>
-<body>
+<body id="body">
 
-<!-- Header med logotyp, titel och tagline -->
-<header>
-    <img src="logo.png" alt="Läxhjälpen Logotyp">
-    <h1>Läxhjälpen</h1>
-    <p>Vi hjälper dig förstå!</p>
-</header>
+    <!-- Header sektion med video och text -->
+    <header>
+        <div class="video-header">
+            <video autoplay muted loop class="header-video">
+                <source src="cover.mp4" type="video/mp4"> <!-- Källan till videon -->
+                Din webbläsare stödjer inte video-taggen.
+            </video>
+            <h1>Kontakt</h1>
+            <p>Kontakta oss för att boka din nästa fotografering.</p>
 
-<!-- Innehållssektionen som består av fyra kolumner -->
-<div class="content">
-    <div>
-        <h2><i class="fas fa-phone"></i> <a href="contact.html">Kontakt</a></h2>
-        <p>Här hittar du oss. Kontaktformulär och adresser.</p>
-    </div>
-</div>
+            <!-- Knapp för att växla Dark Mode -->
+            <div id="themeToggle">
+                <button id="toggleButton">
+                    <span class="icon-moon">🌙</span> Mörkläge
+                </button>
+            </div>
+        </div>
+    </header>
 
-<!-- Sidfot med copyright-information -->
-<footer>
-    <p>© 2024 Power By Saeed Ajely😊</p>
-</footer>
+    <!-- Navigeringsmeny -->
+    <nav>
+        <ul>
+            <li><a href="home.html">Hem</a></li>
+            <li><a href="about.html">Om Oss</a></li>
+            <li><a href="services.html">Tjänster</a></li>
+            <li><a href="gallery.html">Galleri</a></li>
+            <li><a href="contact.html">Kontakt</a></li>
+        </ul>
+    </nav>
 
+    <!-- Huvudinnehåll kontakt -->
+    <section id="contact">
+        <div class="titel-text">
+            <h1>Kontakta Oss</h1>
+            <p>Vi ser fram emot att höra från dig! Fyll i formuläret eller kontakta oss direkt via e-post eller telefon.</p>
+        </div>
+
+        <div class="contact-info">
+            <h2>Email</h2>
+            <p>info@saeedfotostudio.se</p>
+
+            <h2>Telefon</h2>
+            <p>+46 123 456 789</p>
+
+            <h2>Adress</h2>
+            <p>Fotostudion, Kungsgatan 12, 111 22 Stockholm</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p> 📸 © 2024 Saeed Fotostudio 📸 - Alla rättigheter förbehållna</p>
+    </footer>
+
+    <script src="WebScript.js"></script>
 </body>
 </html>

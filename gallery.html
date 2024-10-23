@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galleri - Saeed Fotostudion</title>
+    <link rel="stylesheet" href="webstyle2.css"> <!-- Länk till CSS-filen -->
+</head>
+<body id="body">
+
+    <!-- Header sektion med video och text -->
+    <header>
+        <div class="video-header">
+            <video autoplay muted loop class="header-video">
+                <source src="cover.mp4" type="video/mp4"> <!-- Källan till videon -->
+                Din webbläsare stödjer inte video-taggen.
+            </video>
+            <h1>Galleri</h1>
+            <p>Se våra fantastiska foton från våra senaste projekt.</p>
+
+            <!-- Knapp för att växla Dark Mode -->
+            <div id="themeToggle">
+                <button id="toggleButton">
+                    <span class="icon-moon">🌙</span> Mörkläge
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigeringsmeny -->
+    <nav>
+        <ul>
+            <li><a href="home.html">Hem</a></li>
+            <li><a href="about.html">Om Oss</a></li>
+            <li><a href="services.html">Tjänster</a></li>
+            <li><a href="gallery.html">Galleri</a></li>
+            <li><a href="contact.html">Kontakt</a></li>
+        </ul>
+    </nav>
+
+    <!-- Galleri layout i mitten -->
+    <section id="gallery">
+        <div class="gallery-container">
+            <div class="gallery-item">
+                <img src="bilder/foto1.jpg" alt="Galleri Foto 1">
+            </div>
+            <div class="gallery-item">
+                <img src="bilder/foto2.jpg" alt="Galleri Foto 2">
+            </div>
+            <div class="gallery-item">
+                <img src="bilder/foto3.jpg" alt="Galleri Foto 3">
+            </div>
+            <div class="gallery-item">
+                <img src="bilder/foto4.jpg" alt="Galleri Foto 4">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p> 📸 © 2024 Saeed Fotostudio 📸 - Alla rättigheter förbehållna</p>
+    </footer>
+
+    <script src="WebScript.js"></script>
+</body>
+</html>

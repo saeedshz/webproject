@@ -1,0 +1,174 @@
+/* *** Grundläggande inställningar för alla element på sidan *** */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* *** Inställningar för kroppselementet (body) *** */
+body {
+    font-family: Arial, sans-serif;
+    background-color: white; /* Standard bakgrundsfärg */
+    color: black;
+    transition: all 0.5s ease; /* Mjuk övergång mellan ljus- och mörkt läge */
+}
+
+/* *** Inställningar för mörkt läge *** */
+body.dark-mode {
+    background-color: #1a1a1a; /* Mörk bakgrundsfärg */
+    color: white;
+}
+
+/* *** Inställningar för header (huvudsektionen) *** */
+header {
+    position: relative;
+    text-align: center;
+    padding: 60px 20px;
+    color: rgb(208, 129, 129);
+    font-style: italic ;
+    background-size: cover;
+    background-position: center;
+}
+
+/* *** Videon som används som bakgrund i header *** */
+.header-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Anpassar videon så att den täcker hela headern */
+    z-index: -1; /* Videon visas bakom logotypen och texten */
+}
+
+/* *** Stilar för huvudrubrik och underrubrik i header *** */
+header h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.5em;
+}
+
+/* *** Logotypen i headern *** */
+header img.logo {
+    width: 150px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+/* *** Inställningar för knappen för mörkt läge med sol- och månikoner *** */
+#toggleButton {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+/* *** Inställningar för sol- och månikonerna i knappen *** */
+.icon-sun, .icon-moon {
+    font-size: 1.5em;
+    margin-right: 10px;
+}
+
+#toggleButton:hover {
+    background-color: #555;
+}
+
+/* *** Inställningar för navigeringsmenyn *** */
+nav ul {
+    list-style: none;
+    padding: 10px;
+    background-color: #333;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #86bdd0; /* Färgen ändras när musen hovrar över länkar */
+}
+
+/* *** Inställningar för huvudsektionen med innehåll *** */
+section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+section h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+section p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* *** Inställningar för video-container (reaktivt videoavsnitt) *** */
+.video-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+    max-height: 80vh; /* Max höjd för videon 80% av fönstrets höjd */
+}
+
+/* *** Inställningar för stora skärmar (desktop) *** */
+@media (min-width: 1200px) {
+    .video-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
+
+/* *** Inställningar för små skärmar (mobil) *** */
+@media (max-width: 768px) {
+    .video-container video {
+        max-height: 50vh; /* Max höjd för videon på små enheter (mobil) */
+    }
+}
+
+/* *** Inställningar för sidfoten (footer) *** */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* *** Mörkt läge för sidfot (footer) *** */
+body.dark-mode footer {
+    background-color: #1a1a1a;
+}
+
+/* *** Mörkt läge för navigeringsmenyn *** */
+body.dark-mode nav ul {
+    background-color: #555;
+}
+
+body.dark-mode nav ul li a {
+    color: lightgray;
+}
